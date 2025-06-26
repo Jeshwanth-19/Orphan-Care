@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>Welcome to donor login</h1><br>
+<form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Register" class="btn btn-outline-success"/>
+</form><br>
+<h5>Already a member? <a href="/signin/">Click here</a> to signin</h5>
+{% endblock %}

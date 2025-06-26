@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+      
+        <h1>ORGANIZATION DETAILS</h1>
+{% for name in details_list %}
+     <h5><strong>ORGANIZATION NAME:{{ name }}</strong></h5>
+     <ul>
+     <li>ABOUT ORGANIZATION:{{ name.description }}</li>
+     <li>HEAD OF THE ORGANIZATION:{{ name.firstname}}</li>
+     <li>ESTABLISHED YEAR:{{ name.establishyear }}</li>
+     <li>VALID ID OF THE ORGANIZATION:{{ name.govtissueid }}</li>
+     <li>NUMBER OF ORPHANS:{{ name.numberoforphans }}</li>
+     <li>ADDRESS:{{ name.address }}</li>
+     <li>CITY:{{ name.village }}</li>
+     <li>STATE:{{ name.state}}</li>
+     <li>PINCODE:{{ name.pincode}}</li>
+     <li>CONTACT NUMBER:{{ name.contactnumber}}</li>
+     <li>ACCOUNT DETAILS FOR DONATIONS:{{ name.accountdetails }}</li>
+     </ul>
+     <br/>
+{% endfor %}
+{% endblock  %}

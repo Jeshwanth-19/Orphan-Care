@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<h1>Welcome to OrphanCare</h1>
+<h2>Sign in here if you are an existing user....</h2>
+<form method="POST" class="form">{% csrf_token %}
+    <label>User name:</label>
+    <input type="text" name="username" class="form-control"><br>
+    <label>Password</label>
+    <input type="password" name = "password" class="form-control"><br>
+    <input type="submit" value="Sign In" class="btn btn-outline-success">
+    <a href="base.html">Sign In</a>
+    <br>
+</form><br>
+<h5>Not a member yet? <a href="/signup/">Click here</a> to signup</h5>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>REGISTRATION FORM</h1><br>
+<h1>*Fill the correct details</h1>
+
+<form method="POST" class="form"> {% csrf_token %}
+	<label>NAME OF ORGANIZATION</label>
+	<input type="text" name="Organizationname" class="form-control" required/><br>
+
+	<label>FIRST NAME(HEAD OF THE ORGANIZATION)</label>
+	<input type="text" name="Firstname" class="form-control" required/><br>
+	
+	<label>LAST NAME </label>
+	<input type="text" name="Lastname" class="form-control" required/><br>
+
+	<label>Date OF BIRTH(AS PER AADHAR)</label>
+	<input type="date" name="Dateofbirth" class="form-control" required/><br>
+	<label>EMAIL-ID </label>
+	<input type="email" name="Emailfield" class="form-control" required/><br>
+
+    <label>CONTACT NUMBER </label>
+	<input type="number" name="Contactnumber" class="form-control" required/><br>
+
+	<label>AADHAAR ID </label>
+	<input type="number" name="Eadhar" class="form-control" required/><br>
+
+	<label>ESTABLISHED YEAR OF THE ORGANIZATION</label>
+	<input type="number" name="Establish" class="form-control" required/><br>
+
+	<label>VALID ISSUE ID BY GOVERNMENT</label>
+	<input type="text" name="Govtissueid" class="form-control" required/><br>
+
+	<label>NUMBER OF ORPHANS IN ORGANIZATION</label>
+	<input type="number" name="Numberoforphans" class="form-control" required/><br>
+
+	<label>UPI ID NUMBER(PHONEPAY OR GOOGLEPAY OR PAYTM)</label><br>
+	<label>(If you don't have UPI ID enter "NO UPI ID")</label>
+	<input type="number" name="Upi" class="form-control" required/><br>
+
+	<label>ACCOUNT DETAILS FOR DONATIONS(INCLUDING BANK NAME)</label><br>
+	<label>(if you don't have account enter "NO Account")</label>
+	<textarea name="Accountdetails" class="form-control"></textarea><br>
+
+	<label> ADDRESS</label>
+	<input type="text" name="Address" class="form-control" required/><br>
+
+	<label>VILLAGE/CITY</label>
+	<input type="text" name="Village" class="form-control" required/><br>
+
+	<label>DISTRICT</label>
+	<input type="text" name="District" class="form-control" required/><br>
+
+	<label>STATE</label>
+	<input type="text" name="State" class="form-control" required/><br>
+
+	<label>PINCODE</label>
+	<input type="number" name="Pincode" class="form-control" required/><br>
+
+	<label>FEW WORDS ABOUT YOUR ORGANIZATION</label>
+	<textarea name="Description" class="form-control"></textarea><br>
+
+	<input type="submit" value="submit" class="btn btn-success" />
+</form>
+{% endblock %}

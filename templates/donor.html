@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if request.user.is_authenticated %}
+    <h1>Welcome, {{request.user.first_name}}</h1>
+    <h3><p>Thank you! so much for visiting the page.</p></h3>
+    <h3><p>If you are willing to donate please check the list of orphanages where you can donate funds to the organization through online payment or if you want to knowmore about them you can contact them for further details.
+    </p></h3>
+{% endif %}
+{% endblock %}
